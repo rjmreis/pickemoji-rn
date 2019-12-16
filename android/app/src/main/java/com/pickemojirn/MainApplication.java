@@ -1,4 +1,4 @@
-package com.exoticshorthair;
+package com.pickemojirn;
 
 import android.app.Application;
 import android.content.Context;
