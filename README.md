@@ -1,15 +1,7 @@
-[![Build Status](https://travis-ci.org/rjmreis/exotic-shorthair.svg?branch=master)](https://travis-ci.org/rjmreis/exotic-shorthair)
+[![Build Status](https://travis-ci.org/rjmreis/pickemoji-rn.svg?branch=master)](https://travis-ci.org/rjmreis/pickemoji-rn)
 
-# exotic-shorthair :smiley_cat:
-React Native boilerplate with everything needed to kickstart a new mobile application.
-
-## What's included
-
-- React Native CLI typescript template
-- Well structured application code
-- UI Kitten
-- Redux for state management
-- Async storage
+# Pickemoji RN
+Pick your emoji for any situation!
 
 ## Getting Started
 
@@ -21,7 +13,7 @@ https://facebook.github.io/react-native/docs/getting-started
 
 ```bash
 # Clone the repo
-git clone git@github.com:rjmreis/exotic-shorthair.git
+git clone git@github.com:rjmreis/pickemoji-rn.git
 
 # Navigate to folder and Install dependencies
 cd rn-starter && yarn
