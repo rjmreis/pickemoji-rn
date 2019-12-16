@@ -6,7 +6,6 @@
     "jsx-no-lambda": false,
     "object-literal-sort-keys": false,
     "quotemark": [true, "single", "jsx-double"],
-    "ordered-imports": false,
-    "no-unused-variable": true
+    "ordered-imports": false
   }
 }
