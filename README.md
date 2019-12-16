@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/rjmreis/pickemoji-rn.svg?branch=master)](https://travis-ci.org/rjmreis/pickemoji-rn)
+[![Build Status](https://travis-ci.com/rjmreis/pickemoji-rn.svg?token=z2xQbSN8FL9n8nyaPMpD&branch=master)](https://travis-ci.com/rjmreis/pickemoji-rn)
 
 # Pickemoji RN
 Pick your emoji for any situation!
