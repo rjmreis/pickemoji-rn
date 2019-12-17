@@ -8,7 +8,7 @@ import { rootReducer } from './reducer';
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
-  whitelist: ['authReducer'],
+  whitelist: ['emoji'],
   blacklist: ['counterReducer'],
 };
 

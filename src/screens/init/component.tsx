@@ -1,15 +1,15 @@
 import React from 'react';
-import { ActivityIndicator } from 'react-native';
 import { NavigationActions, StackActions } from 'react-navigation';
+import { Preloader } from '~/components/preloader';
 import { Props } from './';
 
 export const InitComponent = (props: Props) => {
   React.useEffect(() => {
-    props.fetchEmojis();
-
     if (props.emojis) {
-      resetNavigation();
+      return resetNavigation();
     }
+
+    props.fetchEmojis();
   });
 
   const resetNavigation = () => {
@@ -21,5 +21,5 @@ export const InitComponent = (props: Props) => {
     props.navigation.dispatch(resetAction);
   };
 
-  return <ActivityIndicator size="large" />;
+  return <Preloader />;
 };
