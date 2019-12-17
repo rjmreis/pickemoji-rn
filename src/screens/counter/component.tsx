@@ -9,19 +9,6 @@ const MinusIcon = () => <Icon width={32} height={32} name="minus-outline" fill="
 export const CounterComponent = (props: Props) => {
   return (
     <Layout style={styles.container}>
-      <Layout style={styles.loggedInContainer}>
-        <Text category="s1">Logged In:</Text>
-        <Text category="s1">{`${props.loggedIn}`}</Text>
-
-        <Button
-          appearance="ghost"
-          status="primary"
-          size="large"
-          onPress={props.loggedIn === false ? () => props.reduxLogin(true) : () => props.reduxLogin(false)}>
-          Login
-        </Button>
-      </Layout>
-
       <Text category="h3">Counter</Text>
 
       <Layout style={styles.counterContainer}>

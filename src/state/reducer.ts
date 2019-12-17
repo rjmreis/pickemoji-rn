@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import { authReducer } from './auth/reducers';
 import { counterReducer } from './counter/reducers';
+import { emoji } from './emoji/reducers';
 
 export const rootReducer = combineReducers({
-  authReducer,
   counterReducer,
+  emoji,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

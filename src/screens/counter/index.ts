@@ -1,19 +1,18 @@
 import { connect, ConnectedProps } from 'react-redux';
 
-import { login } from '~/state/auth/actions';
 import { increaseCounter, decreaseCounter } from '~/state/counter/actions';
+import { fetchEmojis } from '~/state/emoji/actions';
 import { RootState } from '~/state/reducer';
 import { CounterComponent } from './component';
 
 const mapStateToProps = (state: RootState) => ({
   counter: state.counterReducer.counter,
-  loggedIn: state.authReducer.loggedIn,
 });
 
 const mapDispatchToProps = {
   reduxIncreaseCounter: increaseCounter,
   reduxDecreaseCounter: decreaseCounter,
-  reduxLogin: login,
+  fetchEmojis
 };
 
 const connector = connect(mapStateToProps, mapDispatchToProps);
