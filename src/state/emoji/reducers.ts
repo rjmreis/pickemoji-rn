@@ -1,16 +1,19 @@
-import { FETCH_EMOJIS, EmojiActionTypes } from './types';
+import { IEmojiState, FETCH_EMOJIS, EmojiActionTypes } from './types';
 import * as emojis from '~/resources/emojis.json';
 
-const initialState = {
-  emojis: {},
+const initialState: IEmojiState = {
+  catalog: undefined,
 };
 
-export const emoji = (state = initialState, action: EmojiActionTypes) => {
+export const emoji = (state: IEmojiState = initialState, action: EmojiActionTypes) => {
   switch (action.type) {
     case FETCH_EMOJIS: {
       return {
         ...state,
-        emojis,
+        catalog: {
+          categories: emojis.categories,
+          list: emojis.list,
+        },
       };
     }
 

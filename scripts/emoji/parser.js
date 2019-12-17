@@ -1,18 +1,25 @@
 const columns = 2;
+const blacklist = ['github-custom-emoji'];
 
 /**
  * @param {{ [category: string]: { [subcategory: string]: GithubEmojiIds } }} categorizedGithubEmojiIds
  */
 function generateCategorizedObject(categorizedGithubEmojiIds) {
-  let result = {};
+  let result = {
+    categories: [],
+    list: [],
+  };
 
   const categories = Object.keys(categorizedGithubEmojiIds);
 
   for (const category of categories) {
     const categoryId = getHeaderId(category);
-    let _category = (result[categoryId] = {
+
+    let _category = {
+      id: categoryId,
       name: category,
-    });
+      subCategories: [],
+    };
 
     const subcategorizeGithubEmojiIds = categorizedGithubEmojiIds[category];
     const subcategories = Object.keys(subcategorizeGithubEmojiIds);
@@ -20,8 +27,6 @@ function generateCategorizedObject(categorizedGithubEmojiIds) {
     for (const subcategory of subcategories) {
       const subcategoryId = getHeaderId(subcategory);
       const githubEmojiIds = subcategorizeGithubEmojiIds[subcategory];
-
-      _category.subCategories = [...subcategories];
 
       let emojis = [];
       for (let i = 0; i < githubEmojiIds.length; i += columns) {
@@ -37,10 +42,17 @@ function generateCategorizedObject(categorizedGithubEmojiIds) {
         }
       }
 
-      _category[subcategoryId] = {
+      _category.subCategories.push({
+        id: subcategoryId,
         name: subcategory,
         emojis,
-      };
+      });
+
+      result.list.push(...emojis);
+    }
+
+    if (!blacklist.includes(categoryId)) {
+      result.categories.push(_category);
     }
   }
 

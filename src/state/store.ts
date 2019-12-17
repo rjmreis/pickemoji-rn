@@ -8,8 +8,8 @@ import { rootReducer } from './reducer';
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
-  whitelist: ['emoji'],
-  blacklist: ['counterReducer'],
+  whitelist: [],
+  blacklist: [],
 };
 
 // Middleware: Redux Persist Persisted Reducer
