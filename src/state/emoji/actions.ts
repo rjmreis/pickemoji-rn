@@ -1,5 +1,5 @@
-import { FETCH_EMOJIS, EmojiActionTypes } from './types';
+import { LOAD_EMOJIS, EmojiActionTypes } from './types';
 
 export const fetchEmojis = (): EmojiActionTypes => ({
-  type: FETCH_EMOJIS,
+  type: LOAD_EMOJIS,
 });

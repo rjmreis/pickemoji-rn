@@ -1,4 +1,4 @@
-export const FETCH_EMOJIS = 'pickemoji/FETCH_EMOJIS';
+export const LOAD_EMOJIS = 'pickemoji/LOAD_EMOJIS';
 
 export interface IEmojiSubCategories {
   id: string;
@@ -22,7 +22,7 @@ export interface IEmojiState {
 }
 
 interface FetchEmojisAction {
-  type: typeof FETCH_EMOJIS;
+  type: typeof LOAD_EMOJIS;
 }
 
 export type EmojiActionTypes = FetchEmojisAction;
