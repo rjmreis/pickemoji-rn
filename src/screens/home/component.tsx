@@ -1,23 +1,32 @@
 import React from 'react';
 import nodeEmoji from 'node-emoji';
-import { Container, ItemContainer, ItemCard, ItemText, ItemContent } from './styles';
+import { ScrollableContainer } from '~/styles';
+import { CardContainer, CardItem, CardItemText, CardItemContent } from '~/styles';
 import { Props } from './';
 
 export const HomeComponent = (props: Props) => {
   return (
-    <Container>
-      {props.emojiCategories?.map(category => (
-        <ItemContainer key={category.id}>
-          <ItemCard>
-            <ItemContent>
-              <ItemText category="label">{category.name}</ItemText>
-            </ItemContent>
-            <ItemContent>
-              <ItemText category="h1">{nodeEmoji.get(category.ico)}</ItemText>
-            </ItemContent>
-          </ItemCard>
-        </ItemContainer>
-      ))}
-    </Container>
+    <ScrollableContainer>
+      {props.emojiCategories?.map(category => {
+        return (
+          <CardContainer
+            key={category.id}
+            onPress={() => {
+              props.navigation.navigate('Details', {
+                categoryId: category.id,
+              });
+            }}>
+            <CardItem>
+              <CardItemContent>
+                <CardItemText category="label">{category.name}</CardItemText>
+              </CardItemContent>
+              <CardItemContent>
+                <CardItemText category="h1">{nodeEmoji.get(category.ico)}</CardItemText>
+              </CardItemContent>
+            </CardItem>
+          </CardContainer>
+        );
+      })}
+    </ScrollableContainer>
   );
 };

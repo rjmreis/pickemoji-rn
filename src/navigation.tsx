@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 
 import { Init } from '~/screens/init';
 import { Home } from '~/screens/home';
+import { Details } from '~/screens/details';
 import { Preloader } from '~/components/preloader';
 import { TabBarComponent } from '~/components/TabBarNavigation';
 import TopNavigation from '~/components/TopNavigation';
@@ -13,15 +14,13 @@ const HomeStack = createStackNavigator({
   Home: {
     screen: Home,
     navigationOptions: {
-      headerStyle: {
-        borderBottomWidth: 0,
-      },
+      header: navigationProps => <TopNavigation {...navigationProps} hideBackButton={true} />,
     },
   },
   Details: {
-    screen: Home,
+    screen: Details,
     navigationOptions: {
-      header: navigationProps => <TopNavigation {...navigationProps} />,
+      header: navigationProps => <TopNavigation {...navigationProps} alignment="center" title="Subcategories" />,
     },
   },
 });

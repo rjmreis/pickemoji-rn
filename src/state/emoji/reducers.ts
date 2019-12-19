@@ -1,5 +1,5 @@
 import { IEmojiState, LOAD_EMOJIS, EmojiActionTypes } from './types';
-import * as emojis from '~/resources/emojis.json';
+import { getCatalog } from './parser';
 
 const initialState: IEmojiState = {
   catalog: undefined,
@@ -10,10 +10,7 @@ export const emoji = (state: IEmojiState = initialState, action: EmojiActionType
     case LOAD_EMOJIS: {
       return {
         ...state,
-        catalog: {
-          categories: emojis.categories,
-          list: emojis.list,
-        },
+        catalog: getCatalog(),
       };
     }
 

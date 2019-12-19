@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import { Text } from '@ui-kitten/components';
 
-export const Container = styled.ScrollView.attrs(() => ({
+export const ScrollableContainer = styled.ScrollView.attrs(() => ({
   contentContainerStyle: {
     display: 'flex',
     flexDirection: 'row',
@@ -10,9 +10,10 @@ export const Container = styled.ScrollView.attrs(() => ({
   },
 }))`
   padding: 10px;
+  background-color: #fafafa;
 `;
 
-export const ItemContainer = styled.TouchableOpacity`
+export const CardContainer = styled.TouchableOpacity`
   border: 1px solid lightgrey;
   margin: 5px;
   shadow-opacity: 0.25;
@@ -20,18 +21,18 @@ export const ItemContainer = styled.TouchableOpacity`
   shadow-offset: 0px 0px;
 `;
 
-export const ItemCard = styled.View`
-  width: 120px;
-  height: 120px;
+export const CardItem = styled.View`
+  width: 100px;
+  height: 100px;
   justify-content: center;
   padding: 5px;
   background-color: white;
 `;
 
-export const ItemText = styled(Text)`
+export const CardItemText = styled(Text)`
   text-align: center;
 `;
 
-export const ItemContent = styled.View`
+export const CardItemContent = styled.View`
   align-items: center;
 `;
