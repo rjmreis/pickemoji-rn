@@ -13,7 +13,7 @@ export const TabBarComponent = ({ navigation }: NavigationProps) => {
     <SafeAreaView>
       <BottomNavigation selectedIndex={navigation.state.index} onSelect={onSelect}>
         <BottomNavigationTab title="CATEGORIES" />
-        <BottomNavigationTab title="LIST" />
+        <BottomNavigationTab title="ABOUT" />
       </BottomNavigation>
     </SafeAreaView>
   );

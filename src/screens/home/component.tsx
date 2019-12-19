@@ -11,11 +11,11 @@ export const HomeComponent = (props: Props) => {
         return (
           <CardContainer
             key={category.id}
-            onPress={() => {
+            onPress={() =>
               props.navigation.navigate('Details', {
                 categoryId: category.id,
-              });
-            }}>
+              })
+            }>
             <CardItem>
               <CardItemContent>
                 <CardItemText category="label">{category.name}</CardItemText>

@@ -25,5 +25,6 @@ export const getSubCategories = createSelector(findCategory, catalog =>
       id: subCategory.id,
       name: subCategory.name,
       ico: subCategory.emojis[0],
+      emojis: subCategory.emojis,
     })),
 );
