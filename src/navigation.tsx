@@ -7,8 +7,8 @@ import { Init } from '~/screens/init';
 import { Home } from '~/screens/home';
 import { Details } from '~/screens/details';
 import { List } from '~/screens/list';
-import { TabBarComponent } from '~/components/TabBarNavigation';
-import TopNavigation from '~/components/TopNavigation';
+import { TabBarComponent } from '~/components/tab-bar-navigation';
+import TopNavigation from '~/components/top-navigation';
 import { Preloader } from '~/components/preloader';
 
 const HomeStack = createStackNavigator({
