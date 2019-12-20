@@ -1,14 +1,13 @@
 import AsyncStorage from '@react-native-community/async-storage';
 import { createStore, compose } from 'redux';
 import { persistStore, persistReducer } from 'redux-persist';
-
-import { rootReducer } from './reducer';
+import { rootReducer } from './reducers';
 
 // Middleware: Redux Persist Config
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
-  whitelist: [],
+  whitelist: ['emoji'],
   blacklist: [],
 };
 

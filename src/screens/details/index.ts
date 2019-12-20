@@ -1,7 +1,7 @@
 import { connect, ConnectedProps } from 'react-redux';
 
-import { getSubCategories } from '~/state/emoji/selectors';
-import { RootState } from '~/state/reducer';
+import { getSubCategories, getSkinTone } from '~/state/emoji/selectors';
+import { RootState } from '~/state/reducers';
 import { DetailsComponent } from './component';
 import { NavigationScreenProps } from '~/types/navigation';
 
@@ -10,6 +10,7 @@ const mapStateToProps = (state: RootState, props: NavigationScreenProps) => {
 
   return {
     subCategories: getSubCategories(state, { id: categoryId }),
+    skinTone: getSkinTone(state),
   };
 };
 

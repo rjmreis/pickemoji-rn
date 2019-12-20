@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect';
-import { RootState } from '~/state/reducer';
+import { RootState } from '~/state/reducers';
 import { getIdFromProps } from '~/state/selectors';
 
 const getEmoji = (state: RootState) => state.emoji;
@@ -28,3 +28,5 @@ export const getSubCategories = createSelector(findCategory, catalog =>
       emojis: subCategory.emojis,
     })),
 );
+
+export const getSkinTone = createSelector(getEmoji, emoji => emoji.skinTone);

@@ -1,5 +1,5 @@
 import React from 'react';
-import * as emojiUnicode from 'emoji-dictionary';
+import { getEmoji } from '~/utils/emoji';
 import { ScrollableContainer } from '~/styles';
 import { CardContainer, CardItem, CardItemText, CardItemContent } from '~/styles';
 import { Props } from './';
@@ -9,6 +9,7 @@ export const DetailsComponent = (props: Props) => {
     props.navigation.navigate('ListModal', {
       emojis,
       title,
+      skinTone: props.skinTone,
     });
 
   return (
@@ -20,7 +21,7 @@ export const DetailsComponent = (props: Props) => {
               <CardItemText category="label">{subCategory.name}</CardItemText>
             </CardItemContent>
             <CardItemContent>
-              <CardItemText category="h1">{emojiUnicode.getUnicode(subCategory.ico)}</CardItemText>
+              <CardItemText category="h1">{getEmoji(subCategory.ico, props.skinTone)}</CardItemText>
             </CardItemContent>
           </CardItem>
         </CardContainer>

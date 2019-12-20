@@ -2,7 +2,7 @@ import { connect, ConnectedProps } from 'react-redux';
 
 import { getCategories } from '~/state/emoji/selectors';
 import { fetchEmojis } from '~/state/emoji/actions';
-import { RootState } from '~/state/reducer';
+import { RootState } from '~/state/reducers';
 import { NavigationScreenProps } from '~/types/navigation';
 import { InitComponent } from './component';
 

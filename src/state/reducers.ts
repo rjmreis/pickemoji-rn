@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { emoji } from './emoji/reducers';
+import { emoji } from './emoji/reducer';
 
 export const rootReducer = combineReducers({
   emoji,

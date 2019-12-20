@@ -1,5 +1,3 @@
-export const LOAD_EMOJIS = 'pickemoji/LOAD_EMOJIS';
-
 export interface IEmojiSubCategories {
   id: string;
   name: string;
@@ -19,10 +17,7 @@ export interface IEmojiCatalog {
 
 export interface IEmojiState {
   catalog?: IEmojiCatalog;
+  skinTone: string;
 }
 
-interface FetchEmojisAction {
-  type: typeof LOAD_EMOJIS;
-}
-
-export type EmojiActionTypes = FetchEmojisAction;
+export type Tone = 'none' | 'white' | 'creamWhite' | 'lightBrown' | 'brown' | 'darkBrown';
