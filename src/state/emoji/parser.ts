@@ -1,4 +1,4 @@
-import nodeEmoji from 'node-emoji';
+import * as emojiUnicode from 'emoji-dictionary';
 import * as emojis from '~/resources/emojis.json';
 
 export const getCatalog = () => {
@@ -18,4 +18,4 @@ export const getCatalog = () => {
   };
 };
 
-const hasValidEmoji = (emoji: string) => nodeEmoji.hasEmoji(emoji);
+const hasValidEmoji = (emoji: string) => emojiUnicode.getUnicode(emoji);

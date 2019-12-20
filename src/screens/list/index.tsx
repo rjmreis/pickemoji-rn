@@ -1,6 +1,6 @@
 import React from 'react';
 import { Clipboard } from 'react-native';
-import nodeEmoji from 'node-emoji';
+import * as emojiUnicode from 'emoji-dictionary';
 import { Icon, Button, Input } from '@ui-kitten/components';
 import { NavigationScreenProps } from '~/types/navigation';
 import { ScrollableContainer } from '~/styles';
@@ -40,7 +40,7 @@ export const List = ({ navigation }: NavigationScreenProps) => {
             <CardContainer key={emoji} onPress={() => Clipboard.setString(emoji)}>
               <CardItem>
                 <CardItemContent>
-                  <CardItemText category="h4">{nodeEmoji.get(emoji)}</CardItemText>
+                  <CardItemText category="h4">{emojiUnicode.getUnicode(emoji)}</CardItemText>
                 </CardItemContent>
                 <CardItemContent>
                   <CardItemText category="c1">{emoji}</CardItemText>

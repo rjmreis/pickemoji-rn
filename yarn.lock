@@ -1120,11 +1120,6 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.3.tgz#bdfd69d61e464dcc81b25159c270d75a73c1a636"
   integrity sha512-Il2DtDVRGDcqjDtE+rF8iqg1CArehSK84HZJCT7AMITlyXRBpuPhqGLDQMowraqqu1coEaimg4ZOqggt6L6L+A==
 
-"@types/node-emoji@^1.8.1":
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/@types/node-emoji/-/node-emoji-1.8.1.tgz#689cb74fdf6e84309bcafce93a135dfecd01de3f"
-  integrity sha512-0fRfA90FWm6KJfw6P9QGyo0HDTCmthZ7cWaBQndITlaWLTZ6njRyKwrwpzpg+n6kBXBIGKeUHEQuBx7bphGJkA==
-
 "@types/node@^12.12.18":
   version "12.12.18"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.18.tgz#8d16634797d63c2af5bc647ce879f8de20b56469"
@@ -2472,10 +2467,57 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
+emoji-chars@^1.0.0:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/emoji-chars/-/emoji-chars-1.0.11.tgz#62e6842fb54c9caf5a59d4dedd9cdd553c903d4d"
+  integrity sha512-HV1y9gerCCoOVpTlhmDUtsNRFzRODQ3XE7ro70z4V07/ksMG13MJJAmY6ntgC2kB3DfMsG21CNOgxCidXRp2oA==
+  dependencies:
+    emoji-unicode-map "^1.0.0"
+
+emoji-dictionary@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/emoji-dictionary/-/emoji-dictionary-1.0.10.tgz#bc9ca0b4155ef5e50345d101f0ff6739abb1929e"
+  integrity sha512-L39WB4+2a1bZWTYGQ77favpIIPodbWb9Qm+nxR282+mT0dYUzwZmouk6CfzVaJNIS4oXUJOkNZrsBugTlmUU5A==
+  dependencies:
+    emoji-chars "^1.0.0"
+    emoji-name-map "^1.0.0"
+    emoji-names "^1.0.1"
+    emoji-unicode-map "^1.0.0"
+    emojilib "^2.0.2"
+
+emoji-name-map@^1.0.0, emoji-name-map@^1.1.0:
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/emoji-name-map/-/emoji-name-map-1.2.8.tgz#4bd5c6bfe3ae4bffc7d8ff60c0da57a91df3a0b4"
+  integrity sha512-UxX9lJXCmwqLaRCkprtXZAEMDNk0z7IbNaUJ51gZouq7/9j2IiqsrmUGo/fLd2YgwZFElWlItsjQo86fz4l2zA==
+  dependencies:
+    emojilib "^2.0.2"
+    iterate-object "^1.3.1"
+    map-o "^2.0.1"
+
+emoji-names@^1.0.1:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/emoji-names/-/emoji-names-1.0.11.tgz#15b4fea6adb3add447602e7d359cf370d025c23d"
+  integrity sha512-fEUbbAeVbrXmPDHPY1B5r460K1pWVPV+rYLOPART6fpBaMxpFTUhsIXOmIXxbLJLWFYYKby7GGgoqdldZrUPFA==
+  dependencies:
+    emoji-name-map "^1.0.0"
+
 emoji-regex@^7.0.1:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-7.0.3.tgz#933a04052860c85e83c122479c4748a8e4c72156"
   integrity sha512-CwBLREIQ7LvYFB0WyRvwhq5N5qPhc6PMjD6bYggFlI5YyDgl+0vxq5VHbMOFqLg7hfWzmu8T5Z1QofhmTIhItA==
+
+emoji-unicode-map@^1.0.0:
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/emoji-unicode-map/-/emoji-unicode-map-1.1.10.tgz#060d165496e70a78f428447c2ea222ffc70aaa2f"
+  integrity sha512-03aFWD+dsWbl0JpzWGYQ5z9xsJH47uykUbYjmTKdNbZjtAUiLGTQmFBJUMI0/jW0GjiK/zSkivjkRuPqcdfNIw==
+  dependencies:
+    emoji-name-map "^1.1.0"
+    iterate-object "^1.3.1"
+
+emojilib@^2.0.2:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/emojilib/-/emojilib-2.4.0.tgz#ac518a8bb0d5f76dda57289ccb2fdf9d39ae721e"
+  integrity sha512-5U0rVMU5Y2n2+ykNLQqMoqklN9ICBT/KsvC1Gz6vqHbz2AXXGkG+Pm5rMWk/8Vjrr/mY9985Hi8DYzn1F09Nyw==
 
 encodeurl@~1.0.2:
   version "1.0.2"
@@ -3648,6 +3690,11 @@ istanbul-reports@^2.2.6:
   dependencies:
     handlebars "^4.1.2"
 
+iterate-object@^1.3.0, iterate-object@^1.3.1:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/iterate-object/-/iterate-object-1.3.3.tgz#c58e60f7f0caefa2d382027a484b215988a7a296"
+  integrity sha512-DximWbkke36cnrSfNJv6bgcB2QOMV9PRD2FiowwzCoMsh8RupFLdbNIzWe+cVDWT+NIMNJgGlB1dGxP6kpzGtA==
+
 jest-changed-files@^24.9.0:
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/jest-changed-files/-/jest-changed-files-24.9.0.tgz#08d8c15eb79a7fa3fc98269bc14b451ee82f8039"
@@ -4339,11 +4386,6 @@ lodash.throttle@^4.1.1:
   resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
   integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
 
-lodash.toarray@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/lodash.toarray/-/lodash.toarray-4.4.0.tgz#24c4bfcd6b2fba38bfd0594db1179d8e9b656561"
-  integrity sha1-JMS/zWsvuji/0FlNsRedjptlZWE=
-
 lodash.unescape@4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/lodash.unescape/-/lodash.unescape-4.0.1.tgz#bf2249886ce514cda112fae9218cdc065211fc9c"
@@ -4411,6 +4453,13 @@ map-cache@^0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/map-cache/-/map-cache-0.2.2.tgz#c32abd0bd6525d9b051645bb4f26ac5dc98a0dbf"
   integrity sha1-wyq9C9ZSXZsFFkW7TyasXcmKDb8=
+
+map-o@^2.0.1:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/map-o/-/map-o-2.0.9.tgz#7e7b4bc7b192fd3ca2cda230eaf9d8e3dd5f86ce"
+  integrity sha512-oYdT5amkNO06ZS/+x6qQ6SAz+/k9lByczvBZn8RKnwzWOb9FDlb1NCwBTtjOmloeh4sOuxkxeGf0s2ruSUieEg==
+  dependencies:
+    iterate-object "^1.3.0"
 
 map-visit@^1.0.0:
   version "1.0.0"
@@ -4883,13 +4932,6 @@ nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
-
-node-emoji@^1.10.0:
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/node-emoji/-/node-emoji-1.10.0.tgz#8886abd25d9c7bb61802a658523d1f8d2a89b2da"
-  integrity sha512-Yt3384If5H6BYGVHiHwTL+99OzJKHhgp82S8/dktEK73T26BazdgZ4JZh92xSVtGNJvz9UbXdNAc5hcrXV42vw==
-  dependencies:
-    lodash.toarray "^4.4.0"
 
 node-fetch@^1.0.1:
   version "1.7.3"

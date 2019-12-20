@@ -1,5 +1,5 @@
 import React from 'react';
-import nodeEmoji from 'node-emoji';
+import * as emojiUnicode from 'emoji-dictionary';
 import { ScrollableContainer } from '~/styles';
 import { CardContainer, CardItem, CardItemText, CardItemContent } from '~/styles';
 import { Props } from './';
@@ -21,7 +21,7 @@ export const HomeComponent = (props: Props) => {
                 <CardItemText category="label">{category.name}</CardItemText>
               </CardItemContent>
               <CardItemContent>
-                <CardItemText category="h1">{nodeEmoji.get(category.ico)}</CardItemText>
+                <CardItemText category="h1">{emojiUnicode.getUnicode(category.ico)}</CardItemText>
               </CardItemContent>
             </CardItem>
           </CardContainer>
