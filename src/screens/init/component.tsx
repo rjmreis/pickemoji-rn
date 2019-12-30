@@ -18,7 +18,10 @@ export const InitComponent = (props: Props) => {
       actions: [NavigationActions.navigate({ routeName: 'Home' })],
     });
 
-    props.navigation.dispatch(resetAction);
+    // Just for looks!
+    setTimeout(() => {
+      props.navigation.dispatch(resetAction);
+    }, 1000);
   };
 
   return <Preloader />;

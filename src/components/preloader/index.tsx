@@ -1,9 +1,9 @@
 import React from 'react';
-import { ActivityIndicator } from 'react-native';
+import { Spinner } from '@ui-kitten/components';
 import { Container } from './styles';
 
 export const Preloader = () => (
   <Container>
-    <ActivityIndicator size="large" color="#0000ff" />
+    <Spinner status="primary" />
   </Container>
 );

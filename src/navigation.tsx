@@ -7,9 +7,9 @@ import { Init } from '~/screens/init';
 import { Home } from '~/screens/home';
 import { Details } from '~/screens/details';
 import { List } from '~/screens/list';
+import { About } from '~/screens/about';
 import { TabBarComponent } from '~/components/tab-bar-navigation';
 import TopNavigation from '~/components/top-navigation';
-import { Preloader } from '~/components/preloader';
 
 const HomeStack = createStackNavigator({
   Home: {
@@ -43,8 +43,8 @@ const RootStack = createStackNavigator(
 
 const TabNavigator = createBottomTabNavigator(
   {
-    Categories: RootStack,
-    About: Preloader,
+    Home: RootStack,
+    About,
   },
   {
     navigationOptions: ({ navigation }) => {
