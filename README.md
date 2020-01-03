@@ -3,6 +3,8 @@
 # Pickemoji RN
 Pick your emoji for any situation!
 
+Base boilerplate [exotic-shorthair](https://github.com/rjmreis/exotic-shorthair)
+
 ## Getting Started
 
 #### 1. React Native CLI Quickstart
