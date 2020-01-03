@@ -37,4 +37,4 @@ yarn android
 ```
 
 ## Credits
-Credit to https://github.com/ikatyang/emoji-cheat-sheet for an amazing script that generates a categorised list of official emojis.
+Credit to https://github.com/ikatyang/emoji-cheat-sheet for a great script to categorise official emojis.
