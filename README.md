@@ -1,9 +1,12 @@
 [![Build Status](https://travis-ci.com/rjmreis/pickemoji-rn.svg?token=z2xQbSN8FL9n8nyaPMpD&branch=master)](https://travis-ci.com/rjmreis/pickemoji-rn)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Pickemoji RN
 Pick your emoji for any situation!
 
 Base boilerplate [exotic-shorthair](https://github.com/rjmreis/exotic-shorthair)
+
+![screenshot](screenshot.png)
 
 ## Getting Started
 
